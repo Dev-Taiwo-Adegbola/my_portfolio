@@ -1,0 +1,178 @@
+@font-face {
+  font-family: conteScript;
+  src: url("../../assets/fonts/conte_script/ContéScriptReduced.ttf");
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: 2px solid red; */
+  /* gap: 180px; */
+  /* background-color: rgba(0, 0, 0, 0.219); */
+}
+
+.herogroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 300px;
+}
+
+.heroDescrition {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  /* border-bottom: 3px solid red; */
+  /* animation: spin 1s linear infinite; */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  /* background-color: #2d5f61; */
+  border-bottom: 5px solid rgb(18, 153, 130);
+  animation: spin 5s linear infinite;
+  /* padding: 5px; */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    border-bottom: 5px solid #da8320dc;
+  }
+
+  50% {
+    border-bottom: 5px solid #203cdadc;
+  }
+  75% {
+    border-bottom: 5px solid #da2077dc;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-bottom: 5px solid #45da20dc;
+  }
+}
+
+.heroDescrition {
+  width: 350px;
+}
+
+.heroDescrition p {
+  font-family: Josefin Sans; /* Body */
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000ff; /* black */
+}
+
+.expertise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 60px;
+  gap: 70px;
+}
+
+.expertise div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.expertise div img {
+  width: 40px;
+}
+
+.expertise div:nth-child(3) img {
+  height: 35px;
+}
+.expertise div:nth-child(2) {
+  width: 1px;
+  height: 70%;
+
+  background-color: #9095a0ff;
+}
+
+.expertise div p {
+  width: 200px;
+  text-align: center;
+  font-family: Josefin Sans; /* Body */
+  font-size: 14px;
+  font-weight: 400;
+  color: #9095a0ff; /* neutral-500 */
+}
+
+@media (max-width: 900px) {
+  .herogroup {
+    flex-direction: column;
+
+    /* border: 1px solid red; */
+    gap: 30px;
+  }
+
+  .heroDescrition {
+    width: 350px;
+  }
+
+  .heroDescrition p {
+    border-left: 3px solid #2d5f61;
+    padding-left: 20px;
+    font-size: 15px;
+    /* text-align: center; */
+    line-height: 26px;
+    font-weight: 400;
+    color: var(--text-color); /* black */
+    font-style: oblique;
+  }
+  .heroDescrition p span {
+    border-left: 3px solid #2d5f61;
+    display: block;
+    width: 150px;
+    padding-left: 10px;
+    margin-bottom: 13px;
+    background-color: #56b5b898; /* black */
+    color: var(--text-color); /* black */
+  }
+
+  .expertise {
+    gap: 5px;
+    top: 37px;
+  }
+
+  .expertise div {
+    gap: 10px;
+  }
+
+  .expertise div img {
+    width: 35px;
+  }
+  .expertise div p {
+    width: 160px;
+
+    font-size: 13px;
+  }
+
+  .expertise div:nth-child(3) img {
+    height: 35px;
+  }
+  .expertise div:nth-child(2) {
+    width: 1px;
+    height: 65%;
+  }
+}

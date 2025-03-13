@@ -1,0 +1,287 @@
+/* @import url("../../variables.css"); */
+@font-face {
+  font-family: conteScript;
+  src: url("../../assets/fonts/conte_script/ContéScriptReduced.ttf");
+}
+
+/* :root {
+  --background-color: #f4f4f6;
+  --background-colorDark: #121826;
+
+  --primary-color: #5eead4;
+  --secondary-color: #ffb3b3;
+  --accent-color: #facc15;
+
+  --text-color: #1f2937;
+  --text-colorDark: #e5e7eb;
+} */
+
+.navigationBar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  /* align-items: center; */
+  gap: 40px;
+  width: 100%;
+  height: 56px;
+  background: #ffffffff; /* white */
+  border-radius: 0px;
+  box-shadow: 0px 0px 1px #171a1f12, 0px 0px 2px #171a1f1f; /* shadow-xs */
+
+  padding: 0 30px;
+}
+
+.logo {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.name {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-family: conteScript;
+  font-weight: 100;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+.codee {
+  width: 30px;
+  animation: codeeRotate 5s linear infinite;
+}
+
+@keyframes codeeRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.navigation ul,
+.navigationMob ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+.navigation ul li,
+.navigationMob ul li {
+  list-style: none;
+}
+
+.navigation ul li a,
+.navigationMob ul li a {
+  text-decoration: none;
+  color: #565e6cff;
+  font-family: Josefin Sans; /* Body */
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 400;
+  opacity: 1;
+}
+.navigationMob {
+  display: none;
+}
+
+.hireMe {
+  align-self: center;
+  justify-self: end;
+}
+
+.hireMe,
+.hireMeMob {
+  background-color: var(--accent-color);
+  border: none;
+  width: 170px;
+  height: 30px;
+  /* justify-self: flex-end; */
+  /* margin-left: 35%; */
+  border-radius: 2px;
+}
+.menu {
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+.line1,
+.line2 {
+  width: 25px;
+  height: 3px;
+  background-color: #000000ff;
+  border-radius: 500px;
+}
+
+.line1 {
+  width: 20px;
+}
+.line2 {
+  width: 40px;
+}
+
+.line2ani {
+  /* width: 25px; */
+  transition: position 0.5s;
+  animation: line2 0.3s linear forwards;
+}
+
+.line2aniR {
+  /* width: 20px; */
+  transition: position 0.5s;
+  animation: line2R 0.3s linear forwards;
+}
+
+@keyframes line2 {
+  from {
+    /* position: absolute; */
+
+    transform: rotate(0deg);
+  }
+  to {
+    position: relative;
+    width: 35px;
+    bottom: 5.5px;
+
+    background-color: red;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes line2R {
+  from {
+    position: relative;
+    width: 35px;
+    bottom: 5.5px;
+
+    background-color: red;
+    transform: rotate(45deg);
+  }
+  to {
+    /* position: absolute; */
+    background-color: rgb(0, 0, 0);
+    position: static;
+    width: 40px;
+    transform: rotate(0deg);
+  }
+}
+
+.line1ani {
+  /* width: 20px; */
+  transition: position 0.5s;
+  animation: line1 0.3s linear forwards;
+}
+.line1aniR {
+  /* width: 20px; */
+  transition: position 0.5s;
+  animation: line1R 0.3s linear forwards;
+}
+
+@keyframes line1 {
+  from {
+    /* position: absolute; */
+    transform: rotate(0deg);
+  }
+  to {
+    width: 35px;
+    position: relative;
+    top: 5.5px;
+
+    background-color: red;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes line1R {
+  from {
+    width: 35px;
+    position: relative;
+    top: 5.5px;
+
+    background-color: red;
+    transform: rotate(-45deg);
+  }
+  to {
+    /* position: absolute; */
+    transform: rotate(0deg);
+    position: static;
+    width: 20px;
+
+    background-color: rgb(0, 0, 0);
+  }
+}
+
+@media (max-width: 900px) {
+  .navigationBar {
+    grid-template-columns: 1fr 1fr;
+    position: fixed;
+    z-index: 99999999999;
+    background-color: rgba(248, 248, 248, 0.781);
+    backdrop-filter: blur(5px);
+    padding: 0 20px;
+    /* padding-right: 60px; */
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .menu {
+    justify-self: end;
+    align-self: center;
+    display: flex;
+  }
+
+  .navigationMob {
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100vh;
+    background: #ffffffff; /* white */
+    opacity: 0.2;
+    transition: opacity 1s;
+    animation: menu 0.5s linear 1 forwards;
+  }
+  .navigationMob .toggleContainer {
+    position: fixed;
+    top: 56px;
+    left: 50px;
+    width: 100%;
+    opacity: 0.2;
+    transition: opacity 1s;
+    animation: menu 0.2s linear 1 forwards;
+  }
+  @keyframes menu {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .navigationMob ul {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .navigationMob ul li a {
+    font-size: 0.9rem;
+  }
+
+  .hireMe {
+    display: none;
+  }
+  .hireMe {
+    display: none;
+  }
+}

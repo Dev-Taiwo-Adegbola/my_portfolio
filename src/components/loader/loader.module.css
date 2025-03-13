@@ -1,0 +1,68 @@
+@font-face {
+  font-family: conteScript;
+  src: url("../../assets/fonts/conte_script/ContéScriptReduced.ttf");
+}
+
+.body {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: grid;
+  place-items: center;
+}
+.logo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.name {
+  color: aliceblue;
+  font-size: 2rem;
+  font-family: conteScript;
+  font-weight: 100;
+  font-style: normal;
+  line-height: 45px;
+  transition: all 2s;
+  overflow: hidden;
+  height: 60px;
+  white-space: nowrap;
+  animation: nameRotate 1s 1s infinite linear alternate,
+    blink 0.2s 1s infinite linear alternate;
+  /* animation: blink 0.s 0s infinite linear alternate; */
+}
+
+@keyframes nameRotate {
+  0% {
+    width: 0ch;
+    font-size: 2rem;
+  }
+
+  100% {
+    width: 20ch;
+  }
+}
+@keyframes blink {
+  0% {
+    font-size: 2rem;
+  }
+
+  100% {
+    font-size: 2.1rem;
+  }
+}
+
+.codee {
+  width: 40px;
+  animation: codeeRotate 5s linear infinite;
+}
+
+@keyframes codeeRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

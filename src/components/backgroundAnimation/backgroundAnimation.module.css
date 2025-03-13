@@ -1,0 +1,292 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  /* border: 3px solid red; */
+  z-index: 99;
+  pointer-events: none;
+}
+
+.box0 {
+  position: absolute;
+  top: 48px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to top, black, red);
+
+  animation: first 30s linear 0s infinite alternate;
+}
+
+@keyframes first {
+  40% {
+    top: 100px;
+    left: 40px;
+  }
+
+  80% {
+    top: 500px;
+    left: 100px;
+  }
+
+  100% {
+    top: 200px;
+    left: 600;
+  }
+}
+
+.box1 {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(to top, black, red);
+  animation: second 30s linear 5s infinite alternate;
+}
+@keyframes second {
+  40% {
+    top: 48px;
+    left: 1000px;
+  }
+
+  80% {
+    top: 300px;
+    left: 600px;
+  }
+
+  100% {
+    top: 250px;
+    left: 60;
+  }
+}
+
+.box2 {
+  border-radius: 50%;
+  position: absolute;
+  top: 200px;
+  left: 094px;
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(to top, black, red);
+  animation: third 30s linear 2s infinite alternate;
+}
+
+@keyframes third {
+  40% {
+    top: 430px;
+    left: 200px;
+  }
+
+  80% {
+    top: 84px;
+    left: 960px;
+  }
+
+  100% {
+    top: 500px;
+    left: 960px;
+  }
+}
+.box3 {
+  position: absolute;
+  top: 300px;
+  left: 900px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to top, black, red);
+  animation: fourth 30s linear 4s infinite alternate;
+}
+
+@keyframes fourth {
+  40% {
+    top: 240px;
+    left: 200px;
+  }
+
+  80% {
+    top: 90px;
+    left: 1000px;
+  }
+
+  100% {
+    top: 70px;
+    left: 360px;
+  }
+}
+
+.box4 {
+  border-radius: 50%;
+
+  position: absolute;
+  top: 69px;
+  left: 260px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to top, black, red);
+  animation: fifth 30s linear 0s infinite alternate;
+}
+
+@keyframes fifth {
+  40% {
+    top: 700px;
+    left: 200px;
+  }
+
+  80% {
+    top: 66px;
+    left: 900px;
+  }
+
+  100% {
+    top: 85px;
+    left: 99px;
+  }
+}
+
+.box5 {
+  position: absolute;
+  top: 400px;
+  left: 700px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(to top, rgb(211, 35, 35), rgb(6, 2, 241));
+  animation: sixth 30s linear 0s infinite alternate;
+}
+
+@keyframes sixth {
+  40% {
+    top: 220px;
+    left: 900px;
+  }
+
+  80% {
+    top: 80px;
+    left: 440px;
+  }
+
+  100% {
+    top: 290px;
+    left: 40px;
+  }
+}
+
+.box6 {
+  border-radius: 50%;
+
+  position: absolute;
+  top: 300px;
+  left: 600px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(to top, black, rgb(248, 252, 4));
+  animation: seventh 30s linear 0s infinite alternate;
+}
+
+@keyframes seventh {
+  40% {
+    top: 470px;
+    left: 200px;
+  }
+
+  80% {
+    top: 230px;
+    left: 69px;
+  }
+
+  100% {
+    top: 50px;
+    left: 690px;
+  }
+}
+
+.box7 {
+  position: absolute;
+  top: 300px;
+  left: 40px;
+  border-radius: 50%;
+
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(to top, black, red);
+  animation: eighth 30s linear 0s infinite alternate;
+}
+
+@keyframes eighth {
+  40% {
+    top: 50px;
+    left: 620px;
+  }
+
+  80% {
+    top: 410px;
+    left: 410px;
+  }
+
+  100% {
+    top: 80px;
+    left: 60px;
+  }
+}
+
+.box8 {
+  position: absolute;
+  top: 60px;
+  left: 800px;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to top, black, red);
+  animation: nineth 30s linear 0s infinite alternate;
+}
+
+@keyframes nineth {
+  40% {
+    top: 98px;
+    left: 56px;
+  }
+
+  80% {
+    top: 230px;
+    left: 426px;
+  }
+
+  100% {
+    top: 150px;
+    left: 400px;
+  }
+}
+
+.box9 {
+  position: absolute;
+  top: 200px;
+  left: 1000px;
+  width: 70px;
+  border-radius: 50%;
+  height: 70px;
+  background: linear-gradient(to top, #4a5f4d, rgb(164, 211, 143));
+  animation: tenth 30s linear 0s infinite alternate;
+}
+
+@keyframes tenth {
+  40% {
+    top: 230px;
+    left: 230px;
+  }
+
+  80% {
+    top: 380px;
+    left: 600px;
+  }
+
+  100% {
+    top: 80px;
+    left: 48px;
+  }
+}
+
+.all {
+  opacity: 0.1;
+  z-index: 99999;
+  border-radius: 50%;
+}

@@ -1,0 +1,42 @@
+.taskbar {
+  width: 40px;
+  height: 99vh;
+  background: #181f21;
+
+  padding: 5px;
+}
+
+.flexTaskbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.myself {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.topIcon,
+.buttomIcon {
+  height: 50%;
+}
+.buttomIcon {
+  justify-content: flex-end;
+}
+
+.iconsWrapper {
+  background-color: #283f4688;
+  width: 30px;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.powerBtn {
+  background-color: red;
+  width: 30px;
+  padding: 6px;
+  border-radius: 6px;
+}

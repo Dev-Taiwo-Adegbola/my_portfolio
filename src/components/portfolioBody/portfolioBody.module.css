@@ -1,0 +1,105 @@
+.portfolioBody {
+  width: 100%;
+  height: 100vh;
+  background: #181f21a1;
+  padding: 0 4px;
+}
+
+.vscodeMainUi {
+  height: calc(100% - 29px);
+  width: 100%;
+  background: #181f21;
+  display: grid;
+  grid-template-columns: repeat(22, 1fr);
+  grid-template-rows: 20px 30px auto 20px;
+}
+
+.MMCbtns {
+  display: flex;
+  gap: 5px;
+  height: 25px;
+  align-items: center;
+}
+.uiBtn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 0;
+}
+.minimizebtn {
+  background: #a7da42;
+}
+
+.maximizebtn {
+  background: #258125;
+}
+
+.closebtn {
+  background: #bb2727;
+}
+
+.topNavigations {
+  grid-column: 1/-1;
+
+  background-color: #111111;
+  /* height: 20px; */
+}
+
+.topNavigations nav {
+  margin-left: 12px;
+}
+.topNavigations nav a {
+  color: #b1b1b1;
+  text-decoration: none;
+  font-size: 15px;
+  margin-right: 17px;
+}
+
+.sideNavigations {
+  grid-column: 1/1;
+  grid-row: 2/4;
+  background-color: rgb(27, 27, 26);
+
+  padding: 15px 0;
+  justify-content: space-between;
+}
+
+.sideNavigationsNchild {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.hiddenNavigations {
+  grid-row: 2/4;
+  grid-column: span 4;
+  background-color: rgb(22, 88, 5);
+  /* height: 100%; */
+}
+
+.tabs {
+  grid-column: 2/-1;
+  background-color: rgb(25, 111, 138);
+}
+
+.mainBody {
+  grid-column: 2/-1;
+  background-color: rgb(4, 50, 65);
+}
+
+.footer {
+  grid-column: 1/-1;
+  background-color: rgb(65, 59, 4);
+}
+
+.filesIcon {
+  width: 22px;
+}
+
+.searchIcon {
+  width: 22px;
+}
+.gitIcon {
+  width: 22px;
+}

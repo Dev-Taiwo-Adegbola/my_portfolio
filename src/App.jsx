@@ -11,25 +11,32 @@ import "./App.css";
 import "./variables.css";
 
 function App() {
-  const [load, setload] = useState(false);
-  document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-      // alert("hi")
-      setload(!load);
-    }, 2000);
-  });
+  let rand = Math.ceil(Math.random() * 5001);
+  const [load, setLoad] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(
+      () => {
+        console.log("DOM loaded");
+        setLoad(true);
+      },
+      rand < 2000 ? rand + 2000 : rand
+    );
+
+    // Cleanup function to clear timeout when the component unmounts or re-renders
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
       {load === false ? (
         <Loader />
       ) : (
+        <>
           <BackgroundAnimation />
-        // <>
-        //   <NavigationBar />
-        //   <HeroSection />
-        //   <Projects />
-        //   <FooterSection />
-        // </>
+          <NavigationBar />
+          <HeroSection />
+          {/* <Projects /> */}
+          <FooterSection />
+        </>
       )}
     </>
   );

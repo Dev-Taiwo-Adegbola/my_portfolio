@@ -4,18 +4,21 @@
 }
 .header {
   position: relative;
+  top: 66px;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 66px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* border: 2px solid red; */
+  padding: 5px 0;
   /* gap: 180px; */
   /* background-color: rgba(0, 0, 0, 0.219); */
 }
 
 .herogroup {
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,8 +31,8 @@
 }
 
 .hero img {
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   /* border-bottom: 3px solid red; */
   /* animation: spin 1s linear infinite; */
@@ -38,8 +41,8 @@
 .hero::before {
   content: "";
   position: absolute;
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   /* background-color: #2d5f61; */
   border-bottom: 5px solid rgb(18, 153, 130);
@@ -72,11 +75,36 @@
 }
 
 .heroDescrition p {
-  font-family: Josefin Sans; /* Body */
-  font-size: 14px;
+  border-left: 3px double #2d5f61;
+  padding-left: 20px;
+  font-size: 16px;
+  /* text-align: center; */
   line-height: 26px;
   font-weight: 400;
-  color: #000000ff; /* black */
+  color: var(--text-color); /* black */
+  font-style: oblique;
+}
+.heroDescrition p .introText {
+  border-left: 3px solid #2d5f61;
+  display: block;
+  padding: 10px;
+  font-size: 1.6em;
+  font-weight: 600;
+  width: fit-content;
+  /* height: 400px; */
+  padding-left: 10px;
+  margin-bottom: 13px;
+  background: linear-gradient(125deg, #67c2c598, #30b0b4ce);
+  /* animation: text 0.5s alternate; */
+}
+
+.heroDescrition p .introText span {
+  width: 100%;
+  height: 100%;
+  background: url("../../assets/text.webp");
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
 }
 
 .expertise {
@@ -120,35 +148,20 @@
 
 @media (max-width: 900px) {
   .herogroup {
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     /* border: 1px solid red; */
-    gap: 30px;
+    gap: 40px;
+    /* justify-content: space-between; */
   }
 
-  .heroDescrition {
-    width: 350px;
+  .heroDescrition p .introText {
+   
+    font-size: 1.3em;
+    
   }
 
-  .heroDescrition p {
-    border-left: 3px solid #2d5f61;
-    padding-left: 20px;
-    font-size: 15px;
-    /* text-align: center; */
-    line-height: 26px;
-    font-weight: 400;
-    color: var(--text-color); /* black */
-    font-style: oblique;
-  }
-  .heroDescrition p span {
-    border-left: 3px solid #2d5f61;
-    display: block;
-    width: 150px;
-    padding-left: 10px;
-    margin-bottom: 13px;
-    background-color: #56b5b898; /* black */
-    color: var(--text-color); /* black */
-  }
+  
 
   .expertise {
     gap: 5px;

@@ -15,7 +15,7 @@ const Loader = () => {
     <div className={styles.navigationBar}>
       <div className={styles.logo}>
         <img src={codee} alt="" className={styles.codee} />
-        <p className={styles.name}>taiwo adegbola enoch</p>
+        <p className={styles.name}>Dev_Tae.</p>
       </div>
       <nav className={styles.navigation}>
         <ul>

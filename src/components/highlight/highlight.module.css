@@ -1,0 +1,53 @@
+
+
+.highlightSection {
+  width: 100%;
+  position: relative;
+  top: 66px;
+  height: fit-content;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.highlightSection div {
+  width: 80%;
+}
+
+h2,
+h4 {
+  color: #56b5b8ec;
+}
+
+.keyHighlight ul {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 30px;
+}
+
+.keyHighlight ul li:first-of-type,
+.keyHighlight ul li:nth-of-type(3),
+.keyHighlight ul li:nth-of-type(5) {
+  list-style-position: inside;
+  padding-left: 10px;
+  border-left: 2px solid #2d5f61;
+  /* align-self: flex-start; */
+}
+
+.keyHighlight ul li:nth-of-type(2),
+.keyHighlight ul li:nth-of-type(4) {
+  list-style-position: inside;
+  padding-right: 10px;
+  border-right: 2px solid red;
+  text-align: right;
+  /* align-self: flex-end; */
+}
+.keyHighlight ul li {
+  width: min(100%, 450px);
+  list-style-image:url("../../assets/icons/gear-complex-code0.svg") ;
+font-size: 0.9em;
+}

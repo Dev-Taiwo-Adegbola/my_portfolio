@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #333;
 }
 
 :root {
@@ -13,7 +14,7 @@
 
 #portfolio {
   width: 100%;
-  /* background-color: aqua; */
   overflow: hidden;
+  background: linear-gradient(135deg, #f0f4ff, #f0fff0);
   /* background-color: var(--background-colorDark); */
 }

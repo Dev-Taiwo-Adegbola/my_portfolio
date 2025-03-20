@@ -246,12 +246,12 @@
   .navigationMob {
     display: block;
     position: fixed;
-    z-index: 9999;
-    top: 66px;
+    z-index: -9999;
+    /* top: 66px; */
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: calc(100vh - 66px);
+    height: 100vh;
     background: linear-gradient(135deg, #f0f4ff, #f0fff0);
 
     opacity: 0.2;

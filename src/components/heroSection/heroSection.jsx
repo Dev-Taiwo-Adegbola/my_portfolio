@@ -10,6 +10,7 @@ import code from "../../assets/icons/display-code.svg";
 import py from "../../assets/icons/python.svg";
 
 const HeroSection = () => {
+  
   const textArr = [
     "Front-End Developer",
     "Back-End Developer",

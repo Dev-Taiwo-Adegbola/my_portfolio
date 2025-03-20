@@ -14,7 +14,7 @@
   /* border: 2px solid red; */
   padding: 5px 0;
   /* gap: 180px; */
-  /* background-color: rgba(0, 0, 0, 0.219); */
+  /* background-color: #2cb3d438; */
 }
 
 .herogroup {
@@ -33,24 +33,29 @@
 .hero img {
   width: 300px;
   height: 300px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  box-shadow: -30px 30px #160c30;
   /* border-bottom: 3px solid red; */
-  /* animation: spin 1s linear infinite; */
+  animation: spin 3s 5s linear infinite alternate;
 }
 
-.hero::before {
+.hero img:hover {
+  animation-play-state: paused;
+}
+
+/* .hero::before {
   content: "";
   position: absolute;
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  /* background-color: #2d5f61; */
+  background-color: #2d5f61;
   border-bottom: 5px solid rgb(18, 153, 130);
   animation: spin 5s linear infinite;
-  /* padding: 5px; */
-}
+  padding: 5px;
+} */
 
-@keyframes spin {
+/* @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
@@ -67,6 +72,25 @@
   100% {
     transform: rotate(360deg);
     border-bottom: 5px solid #45da20dc;
+  }
+} */
+
+@keyframes spin {
+  0% {
+    box-shadow: -25px 25px #160c30;
+  }
+  25% {
+    box-shadow: 25px -25px #160c30;
+  }
+
+  50% {
+    box-shadow: 25px 25px #32147e;
+  }
+  75% {
+    box-shadow: -25px -25px #44278b;
+  }
+  100% {
+    box-shadow: -25px 25px #270186;
   }
 }
 
@@ -156,12 +180,32 @@
   }
 
   .heroDescrition p .introText {
-   
     font-size: 1.3em;
-    
   }
 
-  
+  .hero img {
+    width: 280px;
+    height: 280px;
+    box-shadow: -20px 20px #121826;
+  }
+  @keyframes spin {
+    0% {
+      box-shadow: -20px 20px #121826;
+    }
+    25% {
+      box-shadow: 20px -20px #160c30;
+    }
+
+    50% {
+      box-shadow: 20px 20px #160c30;
+    }
+    75% {
+      box-shadow: -20px -20px #331d6b;                                                                                                                              
+    }
+    100% {
+      box-shadow: -20px 20px #270186;
+    }
+  }
 
   .expertise {
     gap: 5px;

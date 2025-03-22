@@ -13,32 +13,45 @@
 }
 
 .highlightSection div {
-  width: 80%;
+  /* width: 80%; */
 }
 
-.resumeBtn {
+.resumeBtn,
+.projectBtn {
   width: min(300px, 80%);
   height: 50px;
-  background-color: #8bebeef3;
+  /* background-color: #8bebeef3; */
   border: none;
   font-size: 0.8em;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 20px;
   /* color: ; */
 }
 
-.resumeBtn svg {
-  /* width: 30px; */
-  /* color: ; */
+.projectBtn span span {
+  color: #2d5f61;
+}
+.resumeBtn span span,
+.messageBtn span span {
+  color: beige;
 }
 
-.touchsection {
+.touchsection,
+.touchsectionProject {
   width: 100%;
   position: relative;
   top: 66px;
   margin-top: 10px;
+}
+
+
+
+
+.touchsectionProject .touchGroup {
+  align-items:flex-start ;
+  line-height: 30px;
 }
 
 .touchGroup {
@@ -51,19 +64,112 @@
   /* border: 1px solid; */
   width: 80%;
 }
+
+.touchsection .touchGroup {
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 30px;
+  width: 80%;
+}
+
+.touchsection .touchGroup h2 {
+  margin-bottom: 30px;
+}
+
 .highlightSvg {
   width: min(100%, 400px);
   height: 350px;
+  /* border: 1px solid; */
 }
-.touch p {
-  /* color: var(--text-colorDark); */
+.touch {
+  width: 380px;
 }
 
-h2,
-h4 {
+.projectBtn {
+  background-color: transparent;
+  border: 2px solid #8bebeef3;
+  margin-top: 30px;
+}
+
+.projectBtn .buttonContent {
+  font-weight: 400;
+  position: relative;
+  z-index: 22;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 20px;
+}
+.projectBtn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 50px;
+  background-color: transparent;
+  border: 2px solid #8bebee;
+  transition: 0.7s;
+  border: 0;
+}
+
+.projectBtn:hover.projectBtn::after {
+  width: min(300px, 80%);
+  background-color: #8bebee;
+  border: 0;
+  height: 50px;
+}
+.projectBtn:hover .arrLine0,
+.projectBtn:hover.arrLine0,
+.projectBtn:hover .arrLine1,
+.projectBtn:hover.arrLine1,
+.projectBtn:hover .arrLine2 {
+  background-color: #2d5f61;
+}
+
+.touchsectionProject h2 {
+  text-transform: capitalize;
+}
+
+.arrowContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.arrLine0,
+.arrLine1,
+.arrLine2 {
+  display: inline-block;
+  margin: 1px;
+  width: 10px;
+  height: 1px;
+  border: 0;
+  background-color: #78ecf0;
+}
+
+.arrLine0 {
+  transform: rotate(42deg);
+}
+.arrLine1 {
+  width: 70px;
+  margin-right: 3px;
+}
+.arrLine2 {
+  transform: rotate(-42deg);
+}
+
+h2 {
+  color: beige;
+}
+h4,
+.touchsection h2,
+.touchsectionProject h2 {
   color: #56b5b8ec;
 }
 .keyHighlight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
 }
 
 .keyHighlight ul {
@@ -71,6 +177,7 @@ h4 {
   display: flex;
   flex-direction: column;
   place-items: center;
+  width: 050%;
   gap: 30px;
 }
 
@@ -79,7 +186,7 @@ h4 {
 .keyHighlight ul li:nth-of-type(5) {
   list-style-position: inside;
   padding-left: 10px;
-  border-left: 2px solid #2d5f61;
+  border-left: 2px solid beige;
   /* align-self: flex-start; */
 }
 
@@ -97,4 +204,89 @@ h4 {
   width: min(100%, 450px);
   list-style-image: url("../../assets/icons/gear-complex-code0.svg");
   font-size: 0.9em;
+}
+
+.touchsectionForm {
+  position: relative;
+  top: 66px;
+  background-color: #2d5f61;
+  padding: 30px 0;
+}
+
+.touchsectionForm .touchGroup {
+  width: 80%;
+  /* border: 1px solid; */
+  align-items: flex-start;
+}
+
+.touchsectionForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.touchsectionForm form input {
+  height: 50px;
+}
+
+.touchsectionForm form input,
+.touchsectionForm form textarea {
+  border: 0;
+  background: none;
+  border-bottom: 2px solid #56b5b8ec;
+  outline: 0;
+}
+
+.touchsectionForm form textarea {
+  resize: none;
+}
+
+.touchsectionForm form input::placeholder,
+.touchsectionForm form textarea::placeholder {
+  color: rgba(245, 245, 220, 0.479);
+}
+
+.touchsectionForm h2 {
+  line-height: 15px;
+  margin-bottom: 20px;
+  text-align: right;
+  /* border: 1px solid; */
+}
+.touchsectionForm h2 span {
+  font-size: 0.7em;
+  font-weight: 400;
+  font-style: italic;
+  /* text-align: right; */
+}
+.touchsectionForm h2 small {
+  color: #56b5b8ec;
+}
+
+
+@media (max-width: 900px) {
+  .touchsection .touchGroup {
+    flex-direction: column;
+     
+  }
+
+  .touch {
+    width: 100%; 
+  }
+
+  .touchsectionProject {
+   
+    top: 0; 
+  }
+
+  .keyHighlight {
+    display: flex;flex-direction: column;
+    /* flex-wrap: wrap; */
+  }
+
+  .keyHighlight ul {
+    width: 80%;
+  }
+  .keyHighlight svg {
+    display:none;
+  }
 }
